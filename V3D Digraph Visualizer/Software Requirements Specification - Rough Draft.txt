@@ -1,1 +1,46 @@
+V3D Digraph Visualiser Software Requirements Specification
+
+ **************************************************Introduction****************************************************************
+ 
+Project Background
+Graph visualizations allow for humans to perceive the information contained within graph structures in a presentable manner. There exists a number of tools which can be utilised to create 2D visualisations of graph from a single specification. An example of such a tool is GraphViz (insert citation). The aim of this project is to provide the means to generate 3D graphs from a single specification. The graph will then be visualised in a 3D space, which will allow the viewer to immerse themselves within the graph and interact with it.
+
+Project Vision
+The increase in performance of graphics engines in this day and age has given rise to many innovative uses of graphics and the development of various graphical applications. The problem which is to be addressed by this project is the design and development of a graphing tool which will visualise a digraph on a plane or a sphere. The viewer of the graph should be able to interact with the digraph and manipulate various aspects of the visualisation.
+
+Project Scope
+The system must allow for the visualisation of digraphs which will defined using the set of triples notations as specified by Barla-Szabo (insert citation). The user should be able to change their vantage point while viewing the graph on a hyperplane or hypersphere. The edges of the graph are to be labels using tuples which contain metadata about the edges. This metadata will provide the necessary information required to produce a force directed graph. The users will be immersed in the 3D environment by means of virtual reality 3D glasses. The user should be able to use 3D glasses such as Google Cardboard (insert citation) which they can build themselves in order to make the system more accessible. Besides viewing the graph, the viewer should be able to interact with the graph by manipulating the metadata related to certain vertices and edges. The system should allow for observers to view the 3D environment on an external display.
+
+ **************************************************Overall description****************************************************************
+
+Product Perspective
+The entire system will consist of 2 different applications, namely the desktop application and the mobile application. The mobile application will be deployed on a mobile phone running an android operating system. This application will contain a graphical user interface through which the user can make use of the system. A pair of virtual reality glasses will be required by the user in order to visualise a graph in a 3D space. The mobile application itself will interact with various components of the mobile device, including the camera and the gyroscope. The desktop application will be compatible with Windows, Linux and macOS operating systems. The desktop application will provide observers with a visual representation of the graph being visualized on the mobile device by the user.
+
+Product Function
+The system should allow for a predefined graph to be read into the graph visualizer. Once the graph has been loaded, it will be visualised either on a hyperplane or a hypersphere. When the user views the graph, he/she should be able to navigate through the graph by zooming in and out, following the edges between vertices and selecting various topics of interest on the graph. The viewer should be able to set various criteria which will be used for the generation of meta-graphs, such as specifying force direction. The viewer should also be able to edit the graph visualization through the use of hand gestures and the system should provide functionality for the edited graph to be saved as a file in which the graph will be represented as a set of triples. The system should allow for observers to view the graph which is being viewed by the user from the user’s perspective and the visuals which the observers see should be updated accordingly as the user’s viewport changes.
+
+User Characteristics
+
+Constraints
+
+Assumptions and Dependencies
+
+
+ **************************************************Specific Requirements****************************************************************
+ 
+External Interface Requirements
+
+Functional Requirements
+
+Actor-System Interactions
+
+Traceability Matrix
+
+Performance Requirements
+
+Design Constraints
+
+Software System Attributes
+
+Other Requirements
 
