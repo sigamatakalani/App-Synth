@@ -30,19 +30,130 @@ The devices on which the system is deployed should contain the necessary hardwar
 
  **************************************************Specific Requirements****************************************************************
  
-External Interface Requirements
+External Interface Requirements:
 
-Functional Requirements
+INTERFACE REQUIREMENTS
+The main user interface will be in the form of a virtual reality space. Through this space, the user will be able to make various interactions with the system by means of head movements and hand gestures. The application itself will have a graphical user interface which the user can make use of in order to alter various configurations of the application. The GUI will mainly be used to manage graph specifications. This includes selecting a graph specification to be visualised, creating a new graph specification or editing an existing one, and deleting graph specifications.
+
+SOFTWARE REQUIREMENTS
+There are multiple software packages and libraries which will be used within the system in order to implement the required functionality. The application will need to be compatible with the Google Android operation system.
+
+HARDWARE REQUIREMENTS
+The system will require the presence of a virtual reality 3D glasses in order to allow for a virtual reality space to be displayed. The system will consist of components which will be deployed on a mobile phone and a desktop computer. As such, the mobile device and the desktop computer should be able to meet the minimum requirements in order to run their respective applications.
+
+COMMUNICATION REQUIREMENTS
+There are various components of the system which will have to communicate with one another in order for the system to provide its required functionality. The mobile application will require an interface through which it will communicate with the desktop application.
+
+Functional Requirements:
+
+HIGH LEVEL REQUIREMENTS
+•	FR1 - Load digraph from a graph specification file into a 3D space
+•	FR2 – Navigate through the graph visualization
+•	FR3 - Set criteria for force direction
+•	FR4 - Edit graph using hand gestures
+•	FR5 – Synchronise graph with external display
+•	FR6 – Create and edit a graph specification.
+
+USE CASES
+
+DATA MODULE
+UC1.1 Save Graph
+i.	Description – The system must be able to save any changes which have been made to the graph by the user. Once the graph has been saved, the graph specification should be updated accordingly.
+ii.	Pre-condition – The graph visualization has been edited.
+iii.	Post-condition – The changes to the graph specification have been saved.
+
+UC1.2 Update Graph
+i.	Description – The system should allow for the user to edit an existing graph specification.
+ii.	Pre-condition – The required graph specification is selected.
+iii.	Post-condition – The graph specification has been updated.
+
+UC1.3 Create Graph
+i.	Description – The system should allow for the user to create a new graph specification to be rendered by the visualizer. 
+ii.	Pre-condition – The option to create a new graph specification is selected.
+iii.	Post-condition – The graph specification has been created.
+
+INTERACTION MODULE
+UC2.1 Select Vertex
+i.	Description – The system should allow for the user to select a vertex to interact with through the graph visualization.  
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – The desired vertex has been selected by the user.
+
+UC2.2 Create Vertex
+i.	Description – The system should allow for the user to create a new vertex and add it to the graph visualization.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – A vertex has been added to the graph.
+
+UC2.3 Update Vertex
+i.	Description – The system should allow for the user to update any metadata related to a particular vertex.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – The desired vertex has been updated.
+
+UC2.4 Remove Vertex
+i.	Description – The system should allow for the user to remove a vertex from the graph visualization.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – A vertex has been removed from the graph.
+
+UC2.5 Create Edge
+i.	Description – The system should allow for the user to create a new edge and add it to the graph visualization.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – A vertex has been added to the graph.
+
+UC2.6 Update Edge
+i.	Description – The system should allow for the user to update any metadata related to a particular edge.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – The desired vertex has been updated.
+
+UC2.7 Remove Edge
+i.	Description – The system should allow for the user to remove an edge from the graph visualization.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – A vertex has been removed from the graph.
+
+RENDERING MODULE
+UC3.1 Render VR Graph
+i.	Description – The system should provide the functionality to render a graph visualization. The visualization will be constructed based on a graph specification provided by the user.
+ii.	Pre-condition – A graph specification must be provided by the user.
+iii.	Post-condition – A graph visualisation has been rendered by the system.
+
+UC3.2 Reload Graph
+i.	Description – The system should allow for a graph visualisation to be re-rendered. The graph visualisation will be reconstructed based on the latest available graph specification.
+ii.	Pre-condition – The graph specification must be valid.
+iii.	Post-condition – The graph has been re-rendered.
+
+UC3.3 Undo Changes
+i.	Description – The system should allow for the user to undo any changes which have been made to the graph visualization.
+ii.	Pre-condition – The user must be viewing the graph in a 3D environment.
+iii.	Post-condition – The graph has been reverted to a valid previous state.
+
+UC3.4 Render Graph on External Display
+i.	Description – The system should provide the functionality to render a graph on an external display. The graph rendered on the external display will be constructed based on the graph which is rendered by the graph visualizer on the mobile device.
+ii.	Pre-condition – A graph visualization should be rendered on the mobile device.
+iii.	Post-condition – A graph has been rendered on the external display.
+
+SYNCHRONIZATION MODULE
+UC4.1 Publish State Changes
+i.	Description – The system should allow for the mobile application to publish any graph state changes to the desktop application. 
+ii.	Pre-condition – The mobile application and the desktop applications should have a means of communication.
+iii.	Post-condition – The state changes have been pushed to the desktop application.
+
+UC4.2 Receive State Changes
+i.	Description – The system should allow for the desktop application to receive the graph state changes which have been published by the mobile application.
+ii.	Pre-condition – The mobile application and the desktop applications should have a means of communication.
+iii.	Post-condition – The state changes have been received by the desktop application and the graph on the external display has been updated accordingly.
 
 Actor-System Interactions
 
 Traceability Matrix
 
 Performance Requirements
+The system should be able to respond to user actions in a timely manner to allow for smooth user interaction. This requirement is especially vital for user interactions with the graph visualization. There should be real time communication between the mobile application and the desktop application to allow observers to witness the user’s interactions with the graph in real time.
 
 Design Constraints
+The mobile application should be able to function with the use of low-end virtual reality glasses, such as Google Cardboard. User interaction with virtual reality environments may be fairly limited due to the lack of high-end virtual reality equipment. The mobile application should be compatible with a large range of Android devices and different versions of the Android Operating System. Since the mobile application and the desktop application need to communicate in real time, the data sent between the applications should be as lightweight as possible to cater for slow network connections and favour overall system performance.
 
 Software System Attributes
+Extensibility – System must be robust and modular, allowing for simple alterations to the current system and to cater for the future growth of the system by allowing additional features to be implemented and incorporated with ease.
+Reliability – The system should be able to process user input accurately and respond in the appropriate manner at all times.
+Security – The system should protect and guide the user to prevent the user from performing any undesirable actions. 
 
 Other Requirements
-
+None
