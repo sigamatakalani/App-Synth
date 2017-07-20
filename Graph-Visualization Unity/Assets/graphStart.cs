@@ -26,7 +26,6 @@ public class graphStart : MonoBehaviour {
     /// </summary>
     // Use this for initialization
     void Start () {
-
         pairsList = new List<EdgePairs>();
 
        GameObject node1 = Instantiate(nodePrefab) as GameObject;
@@ -39,19 +38,46 @@ public class graphStart : MonoBehaviour {
         GameObject node2 = Instantiate(nodePrefab) as GameObject;
         node2.transform.position = new Vector3(4, 1, 1);
         node2.name = "node2";
-       // node2.tag = "2";
-
-        connectTwoNodesDraw(node1,node2);
-        EdgePairs tmp = new  EdgePairs(node1, node2);
-        pairsList.Add(tmp);
-
+        // node2.tag = "2";
 
         GameObject node3 = Instantiate(nodePrefab) as GameObject;
         node3.transform.position = new Vector3(2, 4, 3);
         node3.name = "node3";
 
-        connectTwoNodesDraw(node1, node3);
-        //connectTwoNodesDraw(node2, node3);
+
+        GameObject node4 = Instantiate(nodePrefab) as GameObject;
+        node4.transform.position = new Vector3(7, 6, 3);
+        node4.name = "node4";
+
+        GameObject node5 = Instantiate(nodePrefab) as GameObject;
+        node5.transform.position = new Vector3(-7, 1, 2);
+        node5.name = "node5";
+
+        connectTwoNodesDraw(node1,node2);
+        EdgePairs tmp = new  EdgePairs(node1, node2);
+        pairsList.Add(tmp);
+        
+        connectTwoNodesDraw(node2, node3);
+        EdgePairs tmp2 = new EdgePairs(node2, node3);
+        pairsList.Add(tmp2);
+
+        connectTwoNodesDraw(node3, node1);
+        EdgePairs tmp3 = new EdgePairs(node3, node1);
+        pairsList.Add(tmp3);
+
+
+        connectTwoNodesDraw(node3, node4);
+        EdgePairs tmp4 = new EdgePairs(node3, node4);
+        pairsList.Add(tmp4);
+
+        connectTwoNodesDraw(node3, node5);
+        EdgePairs tmp5 = new EdgePairs(node3, node5);
+        pairsList.Add(tmp5);
+
+
+        connectTwoNodesDraw(node5, node2);
+        EdgePairs tmp6 = new EdgePairs(node5, node2);
+        pairsList.Add(tmp6);
     }
 
     /// <summary>
@@ -71,29 +97,32 @@ public class graphStart : MonoBehaviour {
 
     void connectTwoNodesDraw(GameObject node1, GameObject node2)
     {
-       
-
-        node2.transform.parent = this.gameObject.transform;
+        float cylinderDistance = 0.5f * Vector3.Distance(node1.transform.position, node2.transform.position);
+        Debug.Log(" here " + cylinderDistance);
+         node2.transform.parent = this.gameObject.transform;
 
         // We make a offset gameobject to counteract the default cylindermesh pivot/origin being in the middle
         GameObject ringOffsetCylinderMeshObject = new GameObject();
         ringOffsetCylinderMeshObject.transform.parent = node2.transform;
 
         // Offset the cylinder so that the pivot/origin is at the bottom in relation to the outer ring gameobject.
-        ringOffsetCylinderMeshObject.transform.localPosition = new Vector3(0f, 1f, 0f);
 
-        float cylinderDistance = 0.5f * Vector3.Distance(node1.transform.position, node2.transform.position);
-        Debug.Log(" here " + cylinderDistance);
+        ringOffsetCylinderMeshObject.transform.localPosition = new Vector3(0f, cylinderDistance, 0f);
+
+     
+      
         // Set the radius
         ringOffsetCylinderMeshObject.transform.localScale = new Vector3(radius, cylinderDistance, radius);
         // Create the the Mesh and renderer to show the connecting ring
         MeshFilter ringMesh = ringOffsetCylinderMeshObject.AddComponent<MeshFilter>();
-        ringMesh.mesh = this.cylinderMesh;
+
+        //ringMesh.mesh = this.cylinderMesh;
+        Mesh tempMesh = Instantiate(cylinderMesh);
+        ringMesh.mesh = tempMesh;
+
         MeshRenderer ringRenderer = ringOffsetCylinderMeshObject.AddComponent<MeshRenderer>();
         ringRenderer.material = lineMat;
-
         
-
     }
     //Vector3 calculateEdgePosition(Vector3 edg1, Vector3 edg2) {
 
