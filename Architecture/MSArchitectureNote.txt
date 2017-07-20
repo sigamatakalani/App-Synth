@@ -1,0 +1,2 @@
+Master-slave architecture is used to facilitate the flow of information downstream from the graph visualization module to the external display.
+For better performance, data transferred is limited to JSON objects containing graph's details. Data received is used to render 2D graph on external display.
