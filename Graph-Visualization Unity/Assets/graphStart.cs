@@ -73,7 +73,8 @@ public class graphStart : MonoBehaviour {
         connectTwoNodesDraw(node3, node5);
         EdgePairs tmp5 = new EdgePairs(node3, node5);
         pairsList.Add(tmp5);
-
+        
+        //hello
 
         connectTwoNodesDraw(node5, node2);
         EdgePairs tmp6 = new EdgePairs(node5, node2);
