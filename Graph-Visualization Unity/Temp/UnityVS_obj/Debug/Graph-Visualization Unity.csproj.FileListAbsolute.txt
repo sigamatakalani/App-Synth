@@ -1,0 +1,23 @@
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\nunit.framework.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.TestRunner.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.VR.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.TestRunner.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\nunit.framework.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEngine.VR.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
+C:\Users\Ben\Source\Repos\App-Synth\Graph-Visualization Unity\Temp\UnityVS_obj\Debug\Graph-Visualization Unity.csprojResolveAssemblyReference.cache
