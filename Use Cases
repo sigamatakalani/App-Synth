@@ -1,0 +1,25 @@
+UC1. Initialize/Load graph on startup
+UC2. Initial synchronisation of phone secondary display
+UC3. Calibration of hand position
+
+UC4. Select vertex using hand gesture
+UC5. Modify vertex using hand gesture
+UC6. Select edge using hand gesture
+UC7. Modify edge using hand gesture
+
+UC8. Modify vertex from text file
+UC9. Modify edge from text file
+
+UC10. View graph within virtual environment
+UC11. Movement within virtual environment
+
+UC12. Delete vertices using hand gestures
+UC13. Delete edges using hand gestures
+
+UC14. Save graph
+
+UC15. "Manual" synchronisation of displays ("sync" button)
+
+UC16. Undo change to graph
+
+UC17. Autosave upon exit/shutdown
