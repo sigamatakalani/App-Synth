@@ -1,0 +1,7 @@
+1. Data Module - Facilitates data storage via text file & graph data structure
+
+2. Synchronisation Module - Facilitates connection between displays and synchronisation of representations via socket.io
+
+3.  Rendering Module  - Facilitates rendering of graph representations in VR & on secondary display
+
+4. Interaction Module - Facilitates graph interaction through hand gestures
