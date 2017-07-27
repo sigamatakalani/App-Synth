@@ -118,7 +118,15 @@ public class graphStart : MonoBehaviour {
             count++;
         }
 
-        graphObject.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
+        if (Input.GetKey("left"))
+            this.transform.Rotate(0f, -1f, 0f);
+        if (Input.GetKey("right"))
+            this.transform.Rotate(0f, 1f, 0f);
+        if (Input.GetKey("up"))
+            this.transform.Rotate(1f, 0f, 0f);
+        if (Input.GetKey("down"))
+            this.transform.Rotate(-1f, 0f, 0f);
+        //graphObject.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
 
     }
 
