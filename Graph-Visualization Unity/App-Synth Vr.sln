@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App-Synth Vr", "Assembly-CSharp.csproj", "{FA622C70-C978-A0C3-9D99-6D5EB501699E}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{4FCB9959-CAB1-D7BF-694A-BE65C43C2225}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA622C70-C978-A0C3-9D99-6D5EB501699E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA622C70-C978-A0C3-9D99-6D5EB501699E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA622C70-C978-A0C3-9D99-6D5EB501699E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA622C70-C978-A0C3-9D99-6D5EB501699E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCB9959-CAB1-D7BF-694A-BE65C43C2225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCB9959-CAB1-D7BF-694A-BE65C43C2225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCB9959-CAB1-D7BF-694A-BE65C43C2225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCB9959-CAB1-D7BF-694A-BE65C43C2225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
