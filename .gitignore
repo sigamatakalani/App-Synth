@@ -254,7 +254,6 @@ Graph-Visualization-Unity/Library
 # ===================================== #
 ExportedObj/
 obj/
-Library/
 *.svd
 *.userprefs
 /*.csproj
