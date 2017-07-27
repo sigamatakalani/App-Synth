@@ -156,6 +156,8 @@
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\Script\edgeAlignerAlgorithm.cs" />
     <Compile Include="Assets\Script\graphCreater.cs" />
+    <Compile Include="Assets\WorldSkies\Demo\Scripts\LookCamera.cs" />
+    <Compile Include="Assets\WorldSkies\Demo\Scripts\SkyboxChanger.cs" />
     <Compile Include="Assets\graphStart.cs" />
   </ItemGroup>
   <ItemGroup>
