@@ -292,6 +292,7 @@ MonoBehaviour:
   lineMat: {fileID: 2100000, guid: 7eed6f550b0fa0c41b2a5c4479acc853, type: 2}
   radius: 0.05
   cylinderMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  graphObject: {fileID: 1004928500}
   points: []
   nodePrefab: {fileID: 1599337388238968, guid: 5e1536ea02b87ab4494abfd3510832f9, type: 2}
   edgePrefab: {fileID: 1364294286187842, guid: 875ae486b3019014ca8262e8b6c47755, type: 2}

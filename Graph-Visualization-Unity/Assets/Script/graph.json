@@ -1,9 +1,9 @@
 [
-	{
-		"source":"Node1",
-		"value": 11,
-		"destination":"Node2"
-	},
+  {
+    "parent": "Node1",
+    "value": 11,
+    "child": "Node2"
+  },
 	{
 		"parent":"Node2",
 		"value": 22,
