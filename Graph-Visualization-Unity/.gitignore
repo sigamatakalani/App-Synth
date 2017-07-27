@@ -246,8 +246,6 @@ ModelManifest.xml
 # =============== #
 Temp/
 Library/
-Graph-Visualization Unity/Temp
-Graph-Visualization Unity/Library
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
