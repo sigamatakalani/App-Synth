@@ -40,7 +40,7 @@ public class graphStart : MonoBehaviour {
             
             GameObject parent = Instantiate(nodePrefab) as GameObject;
             parent.name = edge.parent;
-            parent.transform.position = Vector3();
+       //     parent.transform.position = Vector3();
 
             GameObject child = Instantiate(nodePrefab) as GameObject;
             child.name = edge.child;
