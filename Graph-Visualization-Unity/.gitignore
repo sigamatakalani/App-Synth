@@ -246,15 +246,12 @@ ModelManifest.xml
 # =============== #
 Temp/
 Library/
-Graph-Visualization-Unity/Temp
-Graph-Visualization-Unity/Library
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
 obj/
-Library/
 *.svd
 *.userprefs
 /*.csproj
@@ -275,5 +272,3 @@ Library/
 .Trashes
 ehthumbs.db
 Thumbs.db
-Graph-Visualization Unity/.vs/Graph-Visualization Unity/v14/.suo
-Graph-Visualization Unity/.vs/Graph-Visualization Unity/v14/.suo
