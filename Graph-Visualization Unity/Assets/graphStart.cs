@@ -40,6 +40,7 @@ public class graphStart : MonoBehaviour {
             
             GameObject parent = Instantiate(nodePrefab) as GameObject;
             parent.name = edge.parent;
+            parent.transform.position = Vector3();
 
             GameObject child = Instantiate(nodePrefab) as GameObject;
             child.name = edge.child;
@@ -194,6 +195,21 @@ public class graphStart : MonoBehaviour {
             count++;
         }
 
+    }
+
+    public int nodeCounter = 0;
+    public Vector3 PositionAlgorithm()
+    {
+        Vector3 nodePosi = new Vector3 (0, 0, 0);
+        nodeCounter++;
+        int x = 0;
+        int y = 0;
+        int z = 0;
+        if(nodeCounter < 10)
+        {
+
+        }
+        return nodePosi;
     }
 }
 
