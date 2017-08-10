@@ -40,16 +40,12 @@ public class graphStart : MonoBehaviour {
         //connect vertecies
         foreach (EdgePairs edge in pairsList)
         {
-            Debug.Log(edge.parent.name + " and " + edge.child.name);
            connectTwoNodesDraw(edge.parent, edge.child);
         }
 
-
-
-
-        transform.LookAt(new Vector3(0, 0, 0));
-
-
+        //Camera.main.transform.LookAt(this.transform.position);
+        //Camera.main.fieldOfView = 10.0f;
+        //transform.LookAt(new Vector3(0, 0, 0));
     }
 
     /// <summary>
@@ -70,7 +66,6 @@ public class graphStart : MonoBehaviour {
     void connectTwoNodesDraw(GameObject node1, GameObject node2)
     {
         float cylinderDistance = 0.5f * Vector3.Distance(node1.transform.position, node2.transform.position);
-        Debug.Log(" here " + cylinderDistance);
          node2.transform.parent = this.gameObject.transform;
         node1.transform.parent = this.gameObject.transform;
 
@@ -126,6 +121,16 @@ public class graphStart : MonoBehaviour {
             this.transform.Rotate(1f, 0f, 0f);
         if (Input.GetKey("down"))
             this.transform.Rotate(-1f, 0f, 0f);
+
+        if (Input.GetKey("[+]"))
+        {
+            Camera.current.transform.Translate(Vector3.forward * Time.deltaTime * 3);
+        }
+        if(Input.GetKey("[-]"))
+        {
+            Camera.current.transform.Translate(Vector3.back * Time.deltaTime * 3);
+        }
+
         //graphObject.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
 
     }
