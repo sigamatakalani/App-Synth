@@ -34,9 +34,35 @@
 		"value": 77,
 		"child":"Node6"
 	},
-	{
-		"parent":"Node7",
-		"value": 88,
-		"child":"Node4"
+  {
+    "parent": "Node7",
+    "value": 88,
+    "child": "Node4"
+  },
+  {
+    "parent": "Node8",
+    "value": 45,
+    "child": "Node4"
+  },
+  {
+    "parent": "Node9",
+    "value": 23,
+    "child": "Node2"
+  },
+  {
+    "parent": "Node10",
+    "value": 88,
+    "child": "Node7"
+  },
+  {
+    "parent": "Node11",
+    "value": 100,
+    "child": "Node5"
+  },
+  	{
+		"parent":"Node12",
+		"value": 89,
+		"child":"Node9"
 	}
+
 ]

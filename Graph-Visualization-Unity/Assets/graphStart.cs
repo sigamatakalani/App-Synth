@@ -16,7 +16,7 @@ public class graphStart : MonoBehaviour {
 
     Transform nodeTransform;
 
-    float speedMod = 2.0f;
+    float speedMod = 1.0f;
 
     public GameObject nodePrefab;
     public GameObject edgePrefab;
@@ -126,7 +126,7 @@ public class graphStart : MonoBehaviour {
             this.transform.Rotate(1f, 0f, 0f);
         if (Input.GetKey("down"))
             this.transform.Rotate(-1f, 0f, 0f);
-        //graphObject.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
+        graphObject.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0.0f, 0.2f, 0.0f), 20 * Time.deltaTime * speedMod);
 
     }
 
