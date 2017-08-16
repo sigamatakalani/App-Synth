@@ -585,12 +585,12 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 925a1111-4931-4b67-8a22-ecdfa6bc1b80
+  cloudProjectId: 3f712336-5f8d-481a-94a3-ab1c7484744b
   projectName: App-Synth Vr
-  organizationId: takalanijameson
+  organizationId: sigamatakalani
   cloudEnabled: 0
   enableNewInputSystem: 0
