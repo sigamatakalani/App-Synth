@@ -294,6 +294,7 @@ MonoBehaviour:
   cylinderMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   graphObject: {fileID: 1004928500}
   nodePrefab: {fileID: 1599337388238968, guid: 5e1536ea02b87ab4494abfd3510832f9, type: 2}
+  nodeColour: {r: 0, g: 0, b: 0, a: 0}
   edgePrefab: {fileID: 1364294286187842, guid: 875ae486b3019014ca8262e8b6c47755, type: 2}
   line: {fileID: 0}
 --- !u!4 &1004928502
