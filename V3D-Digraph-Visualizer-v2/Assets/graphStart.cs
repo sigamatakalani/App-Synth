@@ -31,6 +31,8 @@ public class graphStart : MonoBehaviour {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
         cam = new Camera();
+        Resolution[] resolutions = Screen.resolutions;
+        Screen.SetResolution(resolutions[0].width, resolutions[0].height, true);
 
         string json = File.ReadAllText("./Assets/Graphs/graph.json");
 
