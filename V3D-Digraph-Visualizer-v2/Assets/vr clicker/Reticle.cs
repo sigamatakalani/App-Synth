@@ -10,7 +10,7 @@ namespace VRStandardAssets.Utils
     public class Reticle : MonoBehaviour
     {
         [SerializeField]
-        private float m_DefaultDistance = 5f;      // The default distance away from the camera the reticle is placed.
+        private float m_DefaultDistance = 3f;      // The default distance away from the camera the reticle is placed.
         [SerializeField]
         private bool m_UseNormal;                  // Whether the reticle should be placed parallel to a surface.
         [SerializeField]
