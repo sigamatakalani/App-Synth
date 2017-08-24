@@ -31,6 +31,7 @@ public class graphStart : MonoBehaviour {
     {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
+<<<<<<< HEAD
 
         /*************************************************************************Begin Test Code*******************************************************/
 
@@ -73,6 +74,11 @@ public class graphStart : MonoBehaviour {
         //line.endColor = Color.white;
 
         /*************************************************************************End Test Code*******************************************************/
+=======
+        cam = new Camera();
+        Resolution[] resolutions = Screen.resolutions;
+        Screen.SetResolution(resolutions[0].width, resolutions[0].height, true);
+>>>>>>> 51704a96b07b0cf02970c8eced74753c08de6d06
 
         string json = File.ReadAllText("./Assets/Graphs/graph.json");
 
