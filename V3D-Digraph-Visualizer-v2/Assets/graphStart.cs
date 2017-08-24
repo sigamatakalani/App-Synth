@@ -12,16 +12,17 @@ public class graphStart : MonoBehaviour {
     //default cylinder mesh
     public Mesh cylinderMesh;
     public GameObject graphObject;
-    Camera cam;
     public GameObject nodePrefab;
     public Color nodeColour;
     public GameObject edgePrefab;
     private List<Edge> graphEdges = new List<Edge>();
     private List<EdgePairs> pairsList;
     private List<GameObject> vertexList;
-
     public LineRenderer line;
 
+    //used to add opposing force to a moving object
+    Vector3 opposingForce;
+    Rigidbody movingObjectRigidBody;
     /// <summary>
     ///Open the file here and get the list of edges and nodes then create edges from the information then setup graph
     /// </summary>
@@ -30,7 +31,48 @@ public class graphStart : MonoBehaviour {
     {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
-        cam = new Camera();
+
+        /*************************************************************************Begin Test Code*******************************************************/
+
+        //GameObject node1 = Instantiate(nodePrefab) as GameObject;
+        //node1.name = "node1";
+        //node1.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        //node1.AddComponent<LineRenderer>();
+        //node1.AddComponent<Dragable>();
+        //node1.GetComponent<Rigidbody>().useGravity = false;
+        //node1.GetComponent<Rigidbody>().drag = 3;
+        //node1.transform.parent = transform;
+        //vertexList.Add(node1);
+
+        //GameObject node2 = Instantiate(nodePrefab) as GameObject;
+        //node2.name = "node2";
+        //node2.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        //node2.AddComponent<LineRenderer>();
+        //node2.AddComponent<Dragable>();
+        //node2.GetComponent<Rigidbody>().useGravity = false;
+        //node2.GetComponent<Rigidbody>().drag = 3;
+        //node2.transform.parent = transform;
+        //vertexList.Add(node2);
+
+        //pairsList.Add(new EdgePairs(node1, node2, 22));
+
+        //SpringJoint joint = node1.AddComponent<SpringJoint>();
+        //joint.minDistance = Vector3.Distance(node1.transform.position, node2.transform.position);
+        //joint.maxDistance = Vector3.Distance(node1.transform.position, node2.transform.position);
+        //node1.GetComponent<SpringJoint>().connectedBody = node2.GetComponent<Rigidbody>();
+
+        //LineRenderer line = node1.GetComponent<LineRenderer>();
+        //line.startWidth = 0.05f;
+        //line.endWidth = 0.05f;
+        //line.positionCount = 2;
+        //line.GetComponent<Renderer>().enabled = true;
+        //line.SetPosition(0, node1.transform.position);
+        //line.SetPosition(1, node2.transform.position);
+        //line.material = new Material(Shader.Find("Particles/Additive"));
+        //line.startColor = Color.white;
+        //line.endColor = Color.white;
+
+        /*************************************************************************End Test Code*******************************************************/
 
         string json = File.ReadAllText("./Assets/Graphs/graph.json");
 
@@ -46,6 +88,7 @@ public class graphStart : MonoBehaviour {
                 parent.AddComponent<LineRenderer>();
                 parent.AddComponent<Dragable>();
                 parent.GetComponent<Rigidbody>().useGravity = false;
+                parent.GetComponent<Rigidbody>().drag = 3;
                 parent.transform.parent = transform;
                 vertexList.Add(parent);
             }
@@ -58,12 +101,11 @@ public class graphStart : MonoBehaviour {
                 child.AddComponent<LineRenderer>();
                 child.AddComponent<Dragable>();
                 child.GetComponent<Rigidbody>().useGravity = false;
+                child.GetComponent<Rigidbody>().drag = 3;
                 child.transform.parent = transform;
                 vertexList.Add(child);
             }
         }
-
-        Debug.Log(vertexList.Count);
 
         foreach (Edge edge in tempEdgeList)
         {
@@ -90,15 +132,8 @@ public class graphStart : MonoBehaviour {
 
         foreach (Camera cam in Camera.allCameras)
         {
-            cam.transform.position = new Vector3(0, 0, -20);
+            cam.transform.position = new Vector3(0, 0, -10);
         }
-
-        //specify node color
-        if(vertexList.Count > 0)
-        {
-            nodeColour = vertexList[0].transform.GetComponent<Renderer>().material.color;
-        }
-       
     }
 
     /// <summary>
@@ -106,7 +141,8 @@ public class graphStart : MonoBehaviour {
     /// </summary>
     // Update is called once per frame
     void Update () {
-
+        
+        //redraw the edge
         foreach(EdgePairs pair in pairsList)
         {
             line = pair.parent.GetComponent<LineRenderer>();
