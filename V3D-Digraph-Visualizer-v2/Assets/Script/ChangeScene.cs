@@ -30,7 +30,7 @@ public class ChangeScene : MonoBehaviour {
         
     }
 
-    public IEnumerator StartCountdown(float countdownValue = 10)
+    public IEnumerator StartCountdown(float countdownValue = 4)
     {
         currCountdownValue = countdownValue;
         while (currCountdownValue > 0)

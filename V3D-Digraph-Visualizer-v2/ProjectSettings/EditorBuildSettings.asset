@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Start Menu.unity
     guid: 91e9754659caf8a4d9c1e866f38b472f
-  - enabled: 0
+  - enabled: 1
     path: Assets/GraphViz.unity
     guid: cbab7eb39aa97064ab8823cc07e909d6
