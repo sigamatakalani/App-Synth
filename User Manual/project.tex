@@ -1,5 +1,14 @@
 \documentclass[english]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{enumitem}
 \usepackage{qtree}
 \usepackage{color}
 \usepackage{forest}
@@ -13,19 +22,41 @@
 \tableofcontents
 \newpage
 
-\section{Requirements}
-    \subsection{At the base level, you’ll need:}
+\setcounter{page}{1}
+
+\section{Introduction}
+\subsection{System Overview}
+This VDR3 graph is a graph visualization that allows users to perceive the information contained within digraphs which will be defined using the set of triples notations specified by Barla-Szabo in a 3D environment. The user should be able to change their vantage point while viewing the graph on a hyperplane or hypersphere.
+
+\subsection{System Configuration}
+Unity is used to create the VR system, whilst .cs code is used to create the Graph. Unity 2017.1 for development can run on Windows 7, 8 and 10 and also from MAC OS X 10.9 moving forward to later developments. For the development of the graph ideally Visual Studio can be used to debug .cs files. There are a few dependencies that are necessary for the functionality to be fully available.
+
+\subsubsection{Dependency Requirements (Development)} 
+
+\begin{itemsize}
+	
+\end{itemsize}
+
+\subsubsection{Dependency Requirements (Compiled App)}
+
+\begin{itemize}
+   \item A phone that runs Android 4.1 (Jelly Bean) or newer.
+    
+   \item Google Cardboard headset or similar
+    
+   \item 25mb minimum space to install the V3D app 
+\end{itemize} 
         
-        \begin{itemize}
-            \item A phone that runs Android 4.1 (Jelly Bean) or newer.
-    
-            \item Google Cardboard headset or similar
-    
-            \item 25mb minimum space to install the V3D app 
-        \end{itemize}
 
 \section{Usage} 
 There could possibly exist some variance between which devices work with which versions of the headset, as well as which are fully compatible and which are only somewhat compatible \newline
 \newline
 Install and run the app.\newline From here, you can simply move your head to look freely around, in 360 degrees
+
+\section{Installation}
+
+\section{Getting Started}
+
+\section{Troubleshooting}
+
 \end{document}
