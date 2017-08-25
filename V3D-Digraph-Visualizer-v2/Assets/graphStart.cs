@@ -38,40 +38,40 @@ public class graphStart : MonoBehaviour {
 
     private void OnGUI()
     {
-        //rotate up
-        if (GUI.RepeatButton(new Rect(Screen.width / 2 - 25, 0, 50, 50), rotateUp))
-        {
-            this.transform.Rotate(1f, 0f, 0f);
-        }
+        ////rotate up
+        //if (GUI.RepeatButton(new Rect(Screen.width / 2 - 25, 0, 50, 50), rotateUp))
+        //{
+        //    this.transform.Rotate(1f, 0f, 0f);
+        //}
 
-        //rotate right
-        if (GUI.RepeatButton(new Rect(Screen.width - 50, Screen.height / 2 - 25, 50, 50), rotateRight))
-        {
-            this.transform.Rotate(0f, 1f, 0f);
-        }
+        ////rotate right
+        //if (GUI.RepeatButton(new Rect(Screen.width - 50, Screen.height / 2 - 25, 50, 50), rotateRight))
+        //{
+        //    this.transform.Rotate(0f, 1f, 0f);
+        //}
 
-        //rotate left
-        if (GUI.RepeatButton(new Rect(0, Screen.height / 2 - 25, 50, 50), rotateLeft))
-        {
-            this.transform.Rotate(0f, -1f, 0f);
-        }
+        ////rotate left
+        //if (GUI.RepeatButton(new Rect(0, Screen.height / 2 - 25, 50, 50), rotateLeft))
+        //{
+        //    this.transform.Rotate(0f, -1f, 0f);
+        //}
 
-        //rotate down
-        if (GUI.RepeatButton(new Rect(Screen.width / 2 - 25, Screen.height - 50, 50, 50), rotateDown))
-        {
-            this.transform.Rotate(-1f, 0f, 0f);
-        }
+        ////rotate down
+        //if (GUI.RepeatButton(new Rect(Screen.width / 2 - 25, Screen.height - 50, 50, 50), rotateDown))
+        //{
+        //    this.transform.Rotate(-1f, 0f, 0f);
+        //}
 
-        //zoom in
-        if (GUI.RepeatButton(new Rect(Screen.width / 2 - 100, Screen.height - 100, 50, 50), zoomIn))
-        {
-            Camera.main.transform.Translate(Vector3.forward * Time.deltaTime * 10);
-        }
+        ////zoom in
+        //if (GUI.RepeatButton(new Rect(Screen.width / 2 - 100, Screen.height - 100, 50, 50), zoomIn))
+        //{
+        //    Camera.main.transform.Translate(Vector3.forward * Time.deltaTime * 10);
+        //}
 
-        if (GUI.RepeatButton(new Rect(Screen.width / 2 + 50, Screen.height - 100, 50, 50), zoomOut))
-        {
-            Camera.main.transform.Translate(Vector3.back * Time.deltaTime * 10);
-        }
+        //if (GUI.RepeatButton(new Rect(Screen.width / 2 + 50, Screen.height - 100, 50, 50), zoomOut))
+        //{
+        //    Camera.main.transform.Translate(Vector3.back * Time.deltaTime * 10);
+        //}
     }
     /// <summary>
     ///Open the file here and get the list of edges and nodes then create edges from the information then setup graph
@@ -245,10 +245,11 @@ public class graphStart : MonoBehaviour {
 
         Debug.Log("Field of view: " + Camera.main.fieldOfView);
 
-        foreach (Camera cam in Camera.allCameras)
-        {
-            cam.transform.position = new Vector3(0, 0, -10);
-        }
+        //foreach (Camera cam in Camera.allCameras)
+        //{
+        //    cam.transform.position = new Vector3(0, 0, -10);
+        //}
+        GameObject.FindWithTag("VRMain").transform.position = new Vector3(0, 0, -10);
     }
 
     /// <summary>

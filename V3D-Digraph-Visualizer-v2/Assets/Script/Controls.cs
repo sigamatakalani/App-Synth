@@ -4,16 +4,74 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour {
 
-    
-	// Use this for initialization
-	void Start ()
+    bool rotateUpTrigger;
+    bool rotateDownTrigger;
+    bool rotateLeftTrigger;
+    bool rotateRightTrigger;
+
+    // Use this for initialization
+    void Start ()
     {
-        graphStart graph = GetComponent<graphStart>();
-        GameObject.FindWithTag("RotateLeft");
+        rotateUpTrigger = false;
+        rotateDownTrigger = false;
+        rotateLeftTrigger = false;
+        rotateRightTrigger = false;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void rotateUp()
+    {
+        rotateUpTrigger = true;
+    }
+    public void rotateDown()
+    {
+        rotateDownTrigger = true;
+    }
+    public void rotateLeft()
+    {
+        rotateLeftTrigger = true;
+    }
+    public void rotateRight()
+    {
+        rotateRightTrigger = true;
+    }
+
+    public void rotateUpHalt()
+    {
+        rotateUpTrigger = false;
+    }
+    public void rotateDownHalt()
+    {
+        rotateDownTrigger = false;
+    }
+    public void rotateLeftHalt()
+    {
+        rotateLeftTrigger = false;
+    }
+    public void rotateRightHalt()
+    {
+        rotateRightTrigger = false;
+    }
+
+
+    // Update is called once per frame
+    void Update ()
+    {
+		if(rotateUpTrigger)
+        {
+            GameObject.FindWithTag("Graph").transform.Rotate(1f, 0f, 0f);
+        }
+        if (rotateDownTrigger)
+        {
+            GameObject.FindWithTag("Graph").transform.Rotate(-1f, 0f, 0f);
+        }
+        if (rotateLeftTrigger)
+        {
+            GameObject.FindWithTag("Graph").transform.Rotate(0f, -1f, 0f);
+        }
+        if (rotateRightTrigger)
+        {
+            GameObject.FindWithTag("Graph").transform.Rotate(0f, 1f, 0f);
+        }
+    }
 }

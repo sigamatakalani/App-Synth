@@ -8,6 +8,9 @@ TagManager:
   - RotateRight
   - RotateUp
   - RotateDown
+  - VRMain
+  - Graph
+  - Back
   layers:
   - Default
   - TransparentFX
