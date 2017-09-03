@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
-public class CubeInteraction3 : MonoBehaviour {
+public class CubeInteraction3 : NetworkBehaviour
+{
 
     private float timer;
     public float gazeTime = 2f;
