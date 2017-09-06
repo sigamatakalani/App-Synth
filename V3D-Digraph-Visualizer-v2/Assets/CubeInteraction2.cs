@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
-public class CubeInteraction2 : MonoBehaviour {
+public class CubeInteraction2 : NetworkBehaviour
+{
 
     private float timer;
     public float gazeTime = 2f;
@@ -75,7 +77,7 @@ public class CubeInteraction2 : MonoBehaviour {
         Debug.Log("Pointer Down");
         gazeDown = true;
         GameObject info = GameObject.Find("InformationObject");
-        info.GetComponent<InformationScript>().jsonToSend = "{'items': [ {'child': 'Node2','parent': 'Node1','value': 11},{'parent': 'Node2','value': 22,'child': 'Node3'},{'parent': 'Node2','value': 33,'child': 'Node4'},{'parent': 'Node2','value': 44,'child': 'Node5'}]}";
+        info.GetComponent<InformationScript>().jsonToSend = "{\"items\": [ {\"child\": \"Node2\",\"parent\": \"Node1\",\"value\": 11},{\"parent\": \"Node2\",\"value\": 22,\"child\": \"Node3\"},{\"parent\": \"Node2\",\"value\": 33,\"child\": \"Node4\"},{\"parent\": \"Node2\",\"value\": 44,\"child\": \"Node5\"}]}";
         Application.LoadLevel(sceneNameVar);
     }
 }

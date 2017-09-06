@@ -3,8 +3,9 @@ using UnityEngine;
 using System.IO;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class graphStart : MonoBehaviour {
+public class graphStart : NetworkBehaviour {
 
     //Material used for connecting lines
     public Material lineMat;
@@ -81,7 +82,7 @@ public class graphStart : MonoBehaviour {
     {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
-        Screen.SetResolution(Screen.width, Screen.height, true);
+        //Screen.SetResolution(Screen.width, Screen.height, true);
         //Vector3 pos = GameObject.FindWithTag("RotateRight").transform.position;
         //GameObject.FindWithTag("RotateRight").transform.position = new Vector3(pos.x + 10, pos.y + 10, pos.z);
 
@@ -190,6 +191,9 @@ public class graphStart : MonoBehaviour {
         /*************************************************************************End Test Code*******************************************************/
 
         //string json = File.ReadAllText("./Assets/Graphs/graph.json");
+
+        ////string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
+        //Debug.Log(json);
 
         //Edge[] tempEdgeList = JsonHelper.FromJson<Edge>(json);
 
