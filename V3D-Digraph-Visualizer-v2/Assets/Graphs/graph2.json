@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "child": "Node2",
+      "parent": "Node1",
+      "value": 31
+    },
+    {
+      "parent": "Node2",
+      "value": 22,
+      "child": "Node3"
+    },
+    {
+      "parent": "Node2",
+      "value": 63,
+      "child": "Node4"
+    },
+    {
+      "parent": "Node2",
+      "value": 84,
+      "child": "Node5"
+    },
+    {
+      "parent": "Node3",
+      "value": 75,
+      "child": "Node5"
+    },
+    {
+      "parent": "Node4",
+      "value": 36,
+      "child": "Node5"
+    }
+  ]
+}
