@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Start Menu.unity
     guid: 91e9754659caf8a4d9c1e866f38b472f
-  - enabled: 1
-    path: Assets/Lobby.unity
+  - enabled: 0
+    path: 
     guid: 26e8b89ca9f0f9f499cf159f8fde4590
   - enabled: 1
     path: Assets/fileSelector.unity

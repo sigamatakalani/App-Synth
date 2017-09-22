@@ -3,9 +3,8 @@ using UnityEngine;
 using System.IO;
 using System.Linq;
 using UnityEngine.UI;
-using UnityEngine.Networking;
 
-public class graphStart : NetworkBehaviour {
+public class graphStart : MonoBehaviour {
 
     //Material used for connecting lines
     public Material lineMat;
