@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.IO;
 using System.Linq;
-using UnityEngine.UI;
 
 public class graphStart : MonoBehaviour {
 
@@ -81,7 +80,7 @@ public class graphStart : MonoBehaviour {
     {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
-        //Screen.SetResolution(Screen.width, Screen.height, true);
+        Screen.SetResolution(Screen.width, Screen.height, true);
         //Vector3 pos = GameObject.FindWithTag("RotateRight").transform.position;
         //GameObject.FindWithTag("RotateRight").transform.position = new Vector3(pos.x + 10, pos.y + 10, pos.z);
 
