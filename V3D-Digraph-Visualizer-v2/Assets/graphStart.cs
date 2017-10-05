@@ -4,6 +4,10 @@ using System.IO;
 using System.Linq;
 using Leap.Unity.Interaction;
 
+namespace vdrGraph
+{
+    
+
 public class graphStart : MonoBehaviour {
 
     //Material used for connecting lines
@@ -17,7 +21,7 @@ public class graphStart : MonoBehaviour {
     public Color nodeColour;
     public GameObject edgePrefab;
     private List<Edge> graphEdges = new List<Edge>();
-    private List<EdgePairs> pairsList;
+    private static List<EdgePairs> pairsList;
     private List<GameObject> vertexList;
     public LineRenderer line;
     //public GameObject rotateUp;
@@ -212,7 +216,7 @@ public class graphStart : MonoBehaviour {
 
         //string json = File.ReadAllText("./Assets/Graphs/graph.json");
 
-        ////string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
+        //string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
         //Debug.Log(json);
 
         //Edge[] tempEdgeList = JsonHelper.FromJson<Edge>(json);
@@ -276,9 +280,9 @@ public class graphStart : MonoBehaviour {
         GameObject.FindWithTag("VRMain").transform.position = new Vector3(0, 0, -10);
     }
 
-    /// <summary>
+    // <summary>
     /// All interaction should be called in the update functin
-    /// </summary>
+    // </summary>
     // Update is called once per frame
     void Update () {
         
@@ -330,7 +334,13 @@ public class graphStart : MonoBehaviour {
         string json = JsonHelper.ToJson<Edge>(edges.ToArray<Edge>());
         File.WriteAllText("./Assets/Graphs/graph.json", json);
     }
+
+    public static List<EdgePairs> getNodePairList()
+    {
+        
+        return pairsList;
+    }
 }
 
-
+}
 
