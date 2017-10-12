@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 
-public class CubeInteraction2 : NetworkBehaviour
+public class CubeInteraction2 : MonoBehaviour
 {
 
     private float timer;

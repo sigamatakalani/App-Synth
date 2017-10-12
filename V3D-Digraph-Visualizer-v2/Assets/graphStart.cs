@@ -2,10 +2,13 @@
 using UnityEngine;
 using System.IO;
 using System.Linq;
-using UnityEngine.UI;
-using UnityEngine.Networking;
+using Leap.Unity.Interaction;
 
-public class graphStart : NetworkBehaviour {
+namespace vdrGraph
+{
+    
+
+public class graphStart : MonoBehaviour {
 
     //Material used for connecting lines
     public Material lineMat;
@@ -18,7 +21,7 @@ public class graphStart : NetworkBehaviour {
     public Color nodeColour;
     public GameObject edgePrefab;
     private List<Edge> graphEdges = new List<Edge>();
-    private List<EdgePairs> pairsList;
+    private static List<EdgePairs> pairsList;
     private List<GameObject> vertexList;
     public LineRenderer line;
     //public GameObject rotateUp;
@@ -82,7 +85,7 @@ public class graphStart : NetworkBehaviour {
     {
         pairsList = new List<EdgePairs>();
         vertexList = new List<GameObject>();
-        //Screen.SetResolution(Screen.width, Screen.height, true);
+        Screen.SetResolution(Screen.width, Screen.height, true);
         //Vector3 pos = GameObject.FindWithTag("RotateRight").transform.position;
         //GameObject.FindWithTag("RotateRight").transform.position = new Vector3(pos.x + 10, pos.y + 10, pos.z);
 
@@ -92,72 +95,93 @@ public class graphStart : NetworkBehaviour {
 
         GameObject node1 = Instantiate(nodePrefab) as GameObject;
         node1.name = "node1";
-        node1.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node1.transform.position = new Vector3(Random.Range(-1.0f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node1.AddComponent<LineRenderer>();
         node1.AddComponent<Dragable>();
+        node1.AddComponent<InteractionBehaviour>();
+        node1.AddComponent<SphereCollider>();
         node1.GetComponent<Rigidbody>().useGravity = false;
         node1.GetComponent<Rigidbody>().drag = 3;
         node1.transform.parent = transform;
+        node1.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node1);
 
         GameObject node2 = Instantiate(nodePrefab) as GameObject;
         node2.name = "node2";
-        node2.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node2.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node2.AddComponent<LineRenderer>();
         node2.AddComponent<Dragable>();
+        node2.AddComponent<InteractionBehaviour>();
+        node2.AddComponent<SphereCollider>();
         node2.GetComponent<Rigidbody>().useGravity = false;
         node2.GetComponent<Rigidbody>().drag = 3;
         node2.transform.parent = transform;
+        node2.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node2);
 
         GameObject node3 = Instantiate(nodePrefab) as GameObject;
         node3.name = "node3";
-        node3.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node3.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node3.AddComponent<LineRenderer>();
         node3.AddComponent<Dragable>();
+        node3.AddComponent<InteractionBehaviour>();
+        node3.AddComponent<SphereCollider>();
         node3.GetComponent<Rigidbody>().useGravity = false;
         node3.GetComponent<Rigidbody>().drag = 3;
         node3.transform.parent = transform;
+        node3.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node3);
 
         GameObject node4 = Instantiate(nodePrefab) as GameObject;
         node4.name = "node4";
-        node4.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node4.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node4.AddComponent<LineRenderer>();
         node4.AddComponent<Dragable>();
+        node4.AddComponent<SphereCollider>();
+        node4.AddComponent<InteractionBehaviour>();
         node4.GetComponent<Rigidbody>().useGravity = false;
         node4.GetComponent<Rigidbody>().drag = 3;
         node4.transform.parent = transform;
+        node4.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node4);
 
         GameObject node5 = Instantiate(nodePrefab) as GameObject;
         node5.name = "node5";
-        node5.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node5.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node5.AddComponent<LineRenderer>();
         node5.AddComponent<Dragable>();
+        node5.AddComponent<SphereCollider>();
+        node5.AddComponent<InteractionBehaviour>();
         node5.GetComponent<Rigidbody>().useGravity = false;
         node5.GetComponent<Rigidbody>().drag = 3;
         node5.transform.parent = transform;
+        node5.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node5);
 
         GameObject node6 = Instantiate(nodePrefab) as GameObject;
         node6.name = "node6";
-        node6.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node6.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node6.AddComponent<LineRenderer>();
         node6.AddComponent<Dragable>();
+        node6.AddComponent<SphereCollider>();
+        node6.AddComponent<InteractionBehaviour>();
         node6.GetComponent<Rigidbody>().useGravity = false;
         node6.GetComponent<Rigidbody>().drag = 3;
         node6.transform.parent = transform;
+        node6.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node6);
 
         GameObject node7 = Instantiate(nodePrefab) as GameObject;
         node7.name = "node7";
-        node7.transform.position = new Vector3(Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f), Random.Range(-4.0f, 4.0f));
+        node7.transform.position = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), -8.5f);
         node7.AddComponent<LineRenderer>();
         node7.AddComponent<Dragable>();
+        node7.AddComponent<SphereCollider>();
+        node7.AddComponent<InteractionBehaviour>();
         node7.GetComponent<Rigidbody>().useGravity = false;
         node7.GetComponent<Rigidbody>().drag = 3;
         node7.transform.parent = transform;
+        node7.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         vertexList.Add(node7);
 
         pairsList.Add(new EdgePairs(node1, node2, 22));
@@ -177,8 +201,8 @@ public class graphStart : NetworkBehaviour {
         foreach (EdgePairs edge in pairsList)
         {
             line = edge.parent.GetComponent<LineRenderer>();
-            line.startWidth = 0.05f;
-            line.endWidth = 0.05f;
+            line.startWidth = 0.02f;
+            line.endWidth = 0.02f;
             line.positionCount = 2;
             line.GetComponent<Renderer>().enabled = true;
             line.SetPosition(0, edge.parent.transform.position);
@@ -192,7 +216,7 @@ public class graphStart : NetworkBehaviour {
 
         //string json = File.ReadAllText("./Assets/Graphs/graph.json");
 
-        ////string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
+        //string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
         //Debug.Log(json);
 
         //Edge[] tempEdgeList = JsonHelper.FromJson<Edge>(json);
@@ -256,9 +280,9 @@ public class graphStart : NetworkBehaviour {
         GameObject.FindWithTag("VRMain").transform.position = new Vector3(0, 0, -10);
     }
 
-    /// <summary>
+    // <summary>
     /// All interaction should be called in the update functin
-    /// </summary>
+    // </summary>
     // Update is called once per frame
     void Update () {
         
@@ -268,6 +292,8 @@ public class graphStart : NetworkBehaviour {
             line = pair.parent.GetComponent<LineRenderer>();
             line.SetPosition(0, pair.parent.transform.position);
             line.SetPosition(1, pair.child.transform.position);
+            pair.parent.transform.position = new Vector3(pair.parent.transform.position.x, pair.parent.transform.position.y, -8.5f);   
+            pair.child.transform.position = new Vector3(pair.child.transform.position.x, pair.child.transform.position.y, -8.5f);
         }
 
         if (Input.GetKey("left"))
@@ -308,7 +334,13 @@ public class graphStart : NetworkBehaviour {
         string json = JsonHelper.ToJson<Edge>(edges.ToArray<Edge>());
         File.WriteAllText("./Assets/Graphs/graph.json", json);
     }
+
+    public static List<EdgePairs> getNodePairList()
+    {
+        
+        return pairsList;
+    }
 }
 
-
+}
 

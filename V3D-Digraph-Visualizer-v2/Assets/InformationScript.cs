@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class InformationScript : NetworkBehaviour
+public class InformationScript : MonoBehaviour
 {
 
     public string jsonToSend = "";

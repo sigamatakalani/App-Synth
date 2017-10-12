@@ -1061,4 +1061,3 @@ public class GvrVideoPlayerTexture : MonoBehaviour {
   }
 #endif  // UNITY_ANDROID && !UNITY_EDITOR
 }
-
