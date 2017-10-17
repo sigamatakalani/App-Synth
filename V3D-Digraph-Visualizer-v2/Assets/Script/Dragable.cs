@@ -3,8 +3,14 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using vdrGraph;
+<<<<<<< HEAD
 using UnityEngine.VR;
 
+=======
+
+using UnityEditor;
+ 
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
 [RequireComponent(typeof(Rigidbody))]
 public class Dragable : MonoBehaviour
 {
@@ -22,14 +28,25 @@ public class Dragable : MonoBehaviour
 
     float forceGenerated;
 
+    List<EdgePairs> graphPairs;
+    int [] visitedNodes;
+    Vector3 startPosition;
+
+    Vector3 forceGenerated;
+
     // Use this for initialization
     void Start()
     {
+<<<<<<< HEAD
         //startPosition = draggingObject.transform.position;
+=======
+        startPosition = draggingObject.transform.position;
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+<<<<<<< HEAD
         //VR DRAG
         updateTimer();
         checkTimeMouseDown();
@@ -37,6 +54,10 @@ public class Dragable : MonoBehaviour
 
 
         if (mouseDown)//Input.GetMouseButton(0)
+=======
+        
+        if (Input.GetMouseButton(0))
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
         {
             checkTimeStandStill();
             if (!isDragging)
@@ -54,6 +75,7 @@ public class Dragable : MonoBehaviour
             }
             else if (draggingObject != null)
             {
+<<<<<<< HEAD
                 //draggingObject.GetComponent<Rigidbody>().MovePosition(CalculateMouse3DVector(draggingObject.transform.position));
                 finalPosition = CalculateMouse3DVector(draggingObject.transform.position);
                 //visitedNodes = null;
@@ -65,10 +87,27 @@ public class Dragable : MonoBehaviour
                 LinkedList<GameObject> visitedNodes = new LinkedList<GameObject>();
                 visitedNodes.AddFirst(draggingObject);
                 graphPairs = graphStart.getNodePairList();
+=======
+                Vector3 finalPosition = CalculateMouse3DVector(draggingObject.transform.position);
+                visitedNodes = null;
+                
+
+                draggingObject.GetComponent<Rigidbody>().MovePosition(finalPosition);
+
+                forceGenerated = startPosition - finalPosition;
+                //graphPairs = draggingObject.GetComponent<List<EdgePairs>>();
+                LinkedList<GameObject> linked = new LinkedList<GameObject>();
+                //List<EdgePairs> graphPairs = graphStart.getNodePairsList();
+                Debug.Log("Hello");
+                linked.AddFirst(draggingObject);
+               
+                 graphPairs = graphStart.getNodePairList();
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
                 foreach (EdgePairs pairing in graphPairs)
                 {
                     GameObject nodeOne = pairing.parent;
                     GameObject nodeTwo = pairing.child;
+<<<<<<< HEAD
                     if (nodeOne == draggingObject)
                     {
                         linked.AddLast(nodeTwo);
@@ -84,6 +123,20 @@ public class Dragable : MonoBehaviour
 
                 //visitedNodes = new int[linked.Count];
                 Dfs(linked, visitedNodes, draggingObject, forceGenerated);
+=======
+                    if(nodeOne == draggingObject)
+                    {
+                        linked.AddLast(nodeTwo);
+                    }
+                    else if(nodeTwo == draggingObject)
+                    {
+                        linked.AddLast(nodeOne);
+                    }
+                }
+
+                visitedNodes = new int[linked.Count];
+                Dfs(linked, draggingObject, forceGenerated);
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
             }
         }
         else
@@ -228,6 +281,7 @@ public class Dragable : MonoBehaviour
         gazedAt = true;
     }
 
+<<<<<<< HEAD
     public void onMouseLeave()
     {
         gazedAt = false;
@@ -278,6 +332,33 @@ public class Dragable : MonoBehaviour
         }
     }
     
+=======
+    private void Dfs(LinkedList<GameObject> linked, GameObject nodeObject, Vector3 forceEntered)
+    {
+        
+        //nodeObject.transform.Translate(forceEntered);
+        if(graphPairs != null)
+        {
+            //draggingObject.GetComponent<Rigidbody>().MovePosition(forceEntered);
+            //Destroy(GetComponent<Rigidbody>());
+            Debug.Log(startPosition);
+            Debug.Log( forceEntered);
+            //Debug.Log(CalculateMouse3DVector(cars.transform.position))
+            foreach(GameObject cars in linked)
+            {
+                Debug.Log("May: 1");
+                Debug.Log( cars.transform.position);
+                //cars.GetComponent<Rigidbody>().MovePosition( forceEntered);
+            }
+            
+        }
+        else
+        {
+            //draggingObject.GetComponent<Rigidbody>().MovePosition(forceEntered);
+        }
+
+    }
+>>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
 
     /*protected void applyNodeLaws(float iTimeStep)
     {
