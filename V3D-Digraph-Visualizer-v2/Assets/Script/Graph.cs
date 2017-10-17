@@ -8,15 +8,42 @@ using System.Linq;
 [System.Serializable]
 public class Edge
 {
-    public string parent;
-    public int value;
-    public string child;
+    public Node parent;
+    public Relationship relationship;
+    public Node child;
 
     public Edge()
     {
-        parent = "";
-        value = 0;
-        child = "";
+        parent = new Node();
+        relationship = new Relationship();
+        child = new Node();
+    }
+}
+
+public class Node
+{
+    public string name;
+    public string label;
+    public string colour;
+    public List<KeyValuePair<string, string>> attributes;
+
+    public Node()
+    {
+        name = "";
+        label = "";
+        attributes = new List<KeyValuePair<string, string>>();
+    }
+}
+
+public class Relationship
+{
+    public string label;
+    public int weight;
+
+    public Relationship()
+    {   
+        label = "";
+        weight = 0;
     }
 }
 
@@ -24,20 +51,35 @@ public class EdgePairs
 {
     public GameObject parent;
     public GameObject child;
-    public int value;
+    public Relationship relationship;
 
     public EdgePairs()
     {
         parent = new GameObject();
         child = new GameObject();
+        relationship = new Relationship();
     }
 
-    public EdgePairs(GameObject parent1, GameObject child1, int value1)
+    public EdgePairs(GameObject parent1, GameObject child1, Relationship relationship1)
     {
 
         parent = parent1;
         child = child1;
-        value = value1;
+        relationship = relationship1;
+    }
+}
+
+public class ArrowInfo
+{
+    public GameObject myArrow;
+    public string myParentNode;
+    public string myChildNode;
+
+    public ArrowInfo(GameObject a, string p, string c)
+    {
+        myArrow = a;
+        myParentNode = p;
+        myChildNode = c;
     }
 }
 

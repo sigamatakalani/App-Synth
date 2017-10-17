@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour {
-
+public class ChangeScene : MonoBehaviour
+{
     public float currCountdownValue;
     string sceneNameVar;
     bool on = false;
 
-    public void openNewScene(string sceneName) {
+    public void openNewScene(string sceneName) 
+    {
         sceneNameVar = sceneName;
         on = true;
         StartCoroutine(StartCountdown());
@@ -25,7 +27,7 @@ public class ChangeScene : MonoBehaviour {
     void Update()
     {
         if (currCountdownValue == 0 && sceneNameVar != null && on) {
-            Application.LoadLevel(sceneNameVar);
+            SceneManager.LoadScene(sceneNameVar);
         }
         
     }

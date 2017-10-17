@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 public class CubeInteraction : MonoBehaviour
 {
@@ -37,7 +39,7 @@ public class CubeInteraction : MonoBehaviour
             child.localScale = newScale;
             child.localPosition = newPosition;
 
-            if(timer >= gazeTime)
+            if(timer >= gazeTime || Input.GetButtonDown("Fire1"))
             {
 
                 ExecuteEvents.Execute(gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerDownHandler);
@@ -74,7 +76,10 @@ public class CubeInteraction : MonoBehaviour
         Debug.Log("Pointer Down");
         gazeDown = true;
         GameObject info = GameObject.Find("InformationObject");
-        info.GetComponent<InformationScript>().jsonToSend = "{\"items\": [ {\"child\": \"Node2\",\"parent\": \"Node1\",\"value\": 11},{\"parent\": \"Node2\",\"value\": 22,\"child\": \"Node3\"},{\"parent\": \"Node2\",\"value\": 33,\"child\": \"Node4\"},{\"parent\": \"Node2\",\"value\": 44,\"child\": \"Node5\"},{\"parent\": \"Node3\",\"value\": 55,\"child\": \"Node5\"},{\"parent\": \"Node4\",\"value\": 66,\"child\": \"Node5\"},{\"parent\": \"Node5\",\"value\": 77,\"child\": \"Node6\"},{\"parent\": \"Node7\",\"value\": 88,\"child\": \"Node4\"}]}";
-        Application.LoadLevel(sceneNameVar);
+        //info.GetComponent<InformationScript>().jsonToSend = "{\"items\": [ {\"child\": \"Node2\",\"parent\": \"Node1\",\"value\": 11},{\"parent\": \"Node2\",\"value\": 22,\"child\": \"Node3\"},{\"parent\": \"Node2\",\"value\": 33,\"child\": \"Node4\"},{\"parent\": \"Node2\",\"value\": 44,\"child\": \"Node5\"},{\"parent\": \"Node3\",\"value\": 55,\"child\": \"Node5\"},{\"parent\": \"Node4\",\"value\": 66,\"child\": \"Node5\"},{\"parent\": \"Node5\",\"value\": 77,\"child\": \"Node6\"},{\"parent\": \"Node7\",\"value\": 88,\"child\": \"Node4\"}]}";
+        //info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText("./Assets/Graphs/" + gameObject.name);
+        //info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText("/storage/emulated/0/Graphs/" + gameObject.name);
+        info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText(gameObject.name);
+        SceneManager.LoadScene(sceneNameVar);
     }
 }

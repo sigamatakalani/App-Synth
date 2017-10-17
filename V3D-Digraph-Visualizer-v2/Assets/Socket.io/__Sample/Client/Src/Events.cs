@@ -22,6 +22,11 @@ namespace Sample {
                 // Emit json-formatted string data
                 socket.EmitJson("my other event", @"{ ""my"": ""data"" }");
             });
+
+            socket.On("response", (string data) =>
+            {
+                Debug.Log("dadadadadaad");
+            });
         }
 
     }

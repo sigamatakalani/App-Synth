@@ -1,0 +1,79 @@
+[
+  {
+    "child": {"name":"Node2", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "parent": {"name":"Node1", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node2", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node3", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node2", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node4", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node2", "label":"Red", "colour": "Red", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node5", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node3", "label":"Red", "colour": "Red","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node5", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node4", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node5", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node5", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node6", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  },
+  {
+    "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node4", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node8", "label":"pink", "colour": "pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node8", "label":"pink", "colour": "pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node8", "label":"pink", "colour": "pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node9", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node8", "label":"pink", "colour": "pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node10", "label":"Brown", "colour": "Brown", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node5", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node11", "label":"Brown", "colour": "Brown", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+  ,
+  {
+    "parent": {"name":"Node11", "label":"Brown", "colour": "Brown","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    "relationship": {"label":"knows", "weight":10},
+    "child": {"name":"Node12", "label":"Purple", "colour": "Purple", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+  }
+]
+

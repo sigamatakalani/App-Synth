@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Prototype.NetworkLobby
 {
     //Player entry in the lobby. Handle selecting color/setting name & getting ready for the game
     //Any LobbyHook can then grab it and pass those value to the game player prefab (see the Pong Example in the Samples Scenes)
-    public class LobbyPlayer : NetworkLobbyPlayer
+    public class LobbyPlayer : NetworkLobbyPlayer//, IPointerEnterHandler, IPointerExitHandler
     {
         static Color[] Colors = new Color[] { Color.magenta, Color.red, Color.cyan, Color.blue, Color.green, Color.yellow };
         //used on server to avoid assigning the same color to two player
@@ -88,6 +89,7 @@ namespace Prototype.NetworkLobby
 
         void SetupOtherPlayer()
         {
+            //Debug.Log("SetupOtherPlayer()");
             nameInput.interactable = false;
             removePlayerButton.interactable = NetworkServer.active;
 
@@ -101,6 +103,7 @@ namespace Prototype.NetworkLobby
 
         void SetupLocalPlayer()
         {
+            //Debug.Log("SetupLocalPlayer()");
             nameInput.interactable = true;
             remoteIcone.gameObject.SetActive(false);
             localIcone.gameObject.SetActive(true);
@@ -132,10 +135,27 @@ namespace Prototype.NetworkLobby
             readyButton.onClick.RemoveAllListeners();
             readyButton.onClick.AddListener(OnReadyClicked);
 
+      
+
             //when OnClientEnterLobby is called, the loval PlayerController is not yet created, so we need to redo that here to disable
             //the add button if we reach maxLocalPlayer. We pass 0, as it was already counted on OnClientEnterLobby
             if (LobbyManager.s_Singleton != null) LobbyManager.s_Singleton.OnPlayersNumberModified(0);
         }
+
+        /*public void OnPointerEnter(PointerEventData eventData)
+        {
+            //Access PointerEventData members here
+            if (eventData.pointerEnter == readyButton)
+            {
+                Debug.Log("Entered new button");
+                OnReadyClicked();
+            }
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+
+        }*/
 
         //This enable/disable the remove button depending on if that is the only local player or not
         public void CheckRemoveButton()
@@ -152,6 +172,7 @@ namespace Prototype.NetworkLobby
 
         public override void OnClientReady(bool readyState)
         {
+            //Debug.Log("OnClientReady()");
             if (readyState)
             {
                 ChangeReadyButtonColor(TransparentColor);
@@ -206,6 +227,7 @@ namespace Prototype.NetworkLobby
 
         public void OnReadyClicked()
         {
+            //Debug.Log("OnReadyClicked()");
             SendReadyToBeginMessage();
         }
 
@@ -224,6 +246,7 @@ namespace Prototype.NetworkLobby
                 LobbyManager.s_Singleton.KickPlayer(connectionToClient);
                 
         }
+      
 
         public void ToggleJoinButton(bool enabled)
         {
@@ -234,7 +257,7 @@ namespace Prototype.NetworkLobby
         [ClientRpc]
         public void RpcUpdateCountdown(int countdown)
         {
-            LobbyManager.s_Singleton.countdownPanel.UIText.text = "Match Starting in " + countdown;
+            LobbyManager.s_Singleton.countdownPanel.UIText.text = "Loading... " + countdown;
             LobbyManager.s_Singleton.countdownPanel.gameObject.SetActive(countdown != 0);
         }
 
