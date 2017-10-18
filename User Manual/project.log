@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.21)  18 OCT 2017 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.21)  18 OCT 2017 23:13
 entering extended mode
 **./project.tex
 (project.tex
@@ -1445,7 +1445,7 @@ LaTeX Info: Redefining \nameref on input line 30.
  ABD: EveryShipout initializing macros
 \c@lstlisting=\count328
 
-(coverpage.tex <Images/logo.PNG, id=78, 586.19pt x 606.265pt>
+(coverpage.tex <Images/logo.PNG, id=82, 586.19pt x 606.265pt>
 File: Images/logo.PNG Graphic file (type png)
 
 <use Images/logo.PNG>
@@ -1483,7 +1483,7 @@ l.67
       [1
 
 ] [2]
-<InterfaceScreenshots/InterfaceCoverPage.PNG, id=122, 797.98125pt x 177.66376pt
+<InterfaceScreenshots/InterfaceCoverPage.PNG, id=127, 797.98125pt x 177.66376pt
 >
 File: InterfaceScreenshots/InterfaceCoverPage.PNG Graphic file (type png)
  <use InterfaceScreenshots/InterfaceCoverPage.PNG>
@@ -1491,7 +1491,7 @@ Package pdftex.def Info: InterfaceScreenshots/InterfaceCoverPage.PNG used on in
 put line 89.
 (pdftex.def)             Requested size: 451.68915pt x 100.56454pt.
 
-<InterfaceScreenshots/EmptyInfo.PNG, id=124, 545.03625pt x 458.9145pt>
+<InterfaceScreenshots/EmptyInfo.PNG, id=129, 545.03625pt x 458.9145pt>
 File: InterfaceScreenshots/EmptyInfo.PNG Graphic file (type png)
 
 <use InterfaceScreenshots/EmptyInfo.PNG>
@@ -1504,7 +1504,7 @@ Overfull \hbox (29.8456pt too wide) in paragraph at lines 96--97
  []
 
 [3 <./InterfaceScreenshots/InterfaceCoverPage.PNG>]
-<InterfaceScreenshots/NewNodes.PNG, id=130, 540.21825pt x 467.346pt>
+<InterfaceScreenshots/NewNodes.PNG, id=137, 540.21825pt x 467.346pt>
 File: InterfaceScreenshots/NewNodes.PNG Graphic file (type png)
 
 <use InterfaceScreenshots/NewNodes.PNG>
@@ -1517,7 +1517,7 @@ Overfull \hbox (44.8456pt too wide) in paragraph at lines 101--102
  []
 
 [4 <./InterfaceScreenshots/EmptyInfo.PNG>]
-<InterfaceScreenshots/AttributeAdded.PNG, id=136, 558.888pt x 542.025pt>
+<InterfaceScreenshots/AttributeAdded.PNG, id=145, 558.888pt x 542.025pt>
 File: InterfaceScreenshots/AttributeAdded.PNG Graphic file (type png)
 
 <use InterfaceScreenshots/AttributeAdded.PNG>
@@ -1543,27 +1543,51 @@ Package rerunfilecheck Warning: File `project.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `project.out':
-(rerunfilecheck)             Before: 86D1F8384596EEC63995A6F862705609;1284
-(rerunfilecheck)             After:  D166F35A51D46CBBFCECFAE562B7408A;1375.
+(rerunfilecheck)             Before: D6C4DE5C30834657195CE0F6ACCE1090;1355
+(rerunfilecheck)             After:  4B460D4663CF2DF03151290481033DAB;1409.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
  ) 
 Here is how much of TeX's memory you used:
- 36447 strings out of 493333
- 791152 string characters out of 3139191
+ 36456 strings out of 493333
+ 791300 string characters out of 3139191
  976395 words of memory out of 3000000
- 39533 multiletter control sequences out of 15000+200000
+ 39534 multiletter control sequences out of 15000+200000
  532739 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,6n,69p,10378b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb>
-Output written on project.pdf (9 pages, 390762 bytes).
+pdfTeX warning (dest): name{subsection.5.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.2.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on project.pdf (9 pages, 392310 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
