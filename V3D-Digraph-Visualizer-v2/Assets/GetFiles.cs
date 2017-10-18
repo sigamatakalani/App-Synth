@@ -28,10 +28,10 @@ public class GetFiles : MonoBehaviour {
         //}
 
         //on pc
-        string path = "./Assets/Graphs/"; // TODO
+        //string path = "./Assets/Graphs/"; // TODO
 
         //on phone
-        //string path = "/storage/emulated/0/"; // TODO
+        string path = "/storage/emulated/0/"; // TODO
         ApplyAllFiles(path, ProcessFile);
         
         

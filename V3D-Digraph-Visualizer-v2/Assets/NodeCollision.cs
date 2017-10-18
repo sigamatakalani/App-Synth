@@ -10,7 +10,6 @@ public class NodeCollision : MonoBehaviour
 
 	void OnCollisionEnter (Collision col)
     {
-        //Debug.Log(gameObject.GetComponent<NodeCollision>().enabled + " " + col.gameObject.GetComponent<NodeCollision>().enabled);
 		CrudGraph.createEdge(gameObject, col.gameObject);
     }
 }

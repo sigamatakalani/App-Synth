@@ -78,6 +78,7 @@ public class StartButtonInteraction : MonoBehaviour
         // GameObject info = GameObject.Find("InformationObject");
         // info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText("./Assets/Graphs/" + gameObject.name);
 	 	GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend = "";
+        GameObject.Find("InformationObject").GetComponent<InformationScript>().fileName = "";
 		SceneManager.LoadScene("GraphViz");
     }
 }

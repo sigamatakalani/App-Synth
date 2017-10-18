@@ -80,6 +80,7 @@ public class CubeInteraction : MonoBehaviour
         //info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText("./Assets/Graphs/" + gameObject.name);
         //info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText("/storage/emulated/0/Graphs/" + gameObject.name);
         info.GetComponent<InformationScript>().jsonToSend = File.ReadAllText(gameObject.name);
+        info.GetComponent<InformationScript>().fileName = gameObject.name;
         SceneManager.LoadScene(sceneNameVar);
     }
 }

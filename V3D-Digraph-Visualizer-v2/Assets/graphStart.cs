@@ -25,6 +25,8 @@ namespace vdrGraph
 		private KeyValuePair<float, float> defaultClusterCenter;
 		public static bool createOwnGraph = false;
 		private Vector3 direction;
+		public static List<Edge> items;
+
 		/// <summary>
 		///Open the file here and get the list of edges and nodes then create edges from the information then setup graph
 		/// </summary>
@@ -35,29 +37,20 @@ namespace vdrGraph
 			pairsList = new List<EdgePairs> ();
 			vertexList = new List<GameObject> ();
 			edges = new List<GameObject> ();
+			items = new List<Edge>();
 			colours = new Dictionary<string, Color>()
 			{
 				{"red", Color.red},
 				{"green", Color.green},
 				{"yellow", Color.yellow},
 				{"black", Color.black},
-				{"orange", new Color(0.2f, 0.3f, 0.4f)},
+				{"orange", new Color(1f, 0.4f, 0f)},
 				{"brown", new Color(0.64f, 0.16f, 0.16f)},
 				{"pink", new Color(0.1f, 0.42f, 0.7f)},
 				{"purple", new Color(0.5f, 0, 0.5f)},	
 			};
 
-			centers = new Dictionary<string, Vector3>()
-			{
-				// {"red", new Vector3(-15f, 0f, Random.Range(-5f, 5f))},
-				// {"green", new Vector3(-15f, 0f, Random.Range(5f, 5f))},
-				// {"yellow", new Vector3(-15f, 0f, Random.Range(-5f, -5f))},
-				// {"black", new Vector3(-15f, 0f, Random.Range(5f, -5f))},
-				// {"orange", new Vector3(-15f, 0f, Random.Range(0f, 5f))},
-				// {"brown", new Vector3(-15f, 0f, Random.Range(0f, -5f))},
-				// {"pink", new Vector3(-15f, 0f, Random.Range(-5f, 0f))},
-				// {"purple", new Vector3(-15f, 0f, Random.Range(5f, 0f))}	
-			};
+			centers = new Dictionary<string, Vector3>();
 
 			clusterCentersQueue = new Queue<Vector3>();
 			clusterCentersQueue.Enqueue(new Vector3(-5f, 5f, Random.Range(5f, 10f)));
@@ -241,15 +234,16 @@ namespace vdrGraph
 			//socket.On("receiveGraphData", (string data) =>
 			//{
 
-			//string path = "/storage/emulated/0/Graphs/graph.txt";
+			//string path = "/storage/emu lated/0/Graphs/graph.txt";
 			//Edge[] tempEdgeList = JsonHelper.FromJson<Edge> (File.ReadAllText (path));
 
-			//string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
-			string json = "";
+			string json = GameObject.Find("InformationObject").GetComponent<InformationScript>().jsonToSend;
+			//string json = "";
 
 			if(json != "")
 			{
-				List<Edge>items = JsonConvert.DeserializeObject<List<Edge>>(json);
+				items = JsonConvert.DeserializeObject<List<Edge>>(json);
+				print(JsonConvert.SerializeObject(items));
 
 				foreach (Edge edge in items) 
 				{
@@ -284,7 +278,7 @@ namespace vdrGraph
 						child.transform.parent = transform;
 						child.GetComponent<Rigidbody>().freezeRotation = true;
 						child.GetComponent<Renderer>().material.color = colours[edge.child.colour.ToLower()];
-						if(!centers.ContainsKey(edge.parent.colour.ToLower()))
+						if(!centers.ContainsKey(edge.child.colour.ToLower()))
 						{
 							centers.Add(edge.child.colour.ToLower(), clusterCentersQueue.Dequeue());
 						}
@@ -298,7 +292,9 @@ namespace vdrGraph
 				{
 					//render edge line
 					EdgePairs tempEdge = new EdgePairs (vertexList.Where(U => U.name == items[i].parent.name).FirstOrDefault (), vertexList.Where (U => U.name == items [i].child.name).FirstOrDefault (), items[i].relationship);
-					pairsList.Add (tempEdge);
+					tempEdge.parentAttributes = items[i].parent.attributes;
+					tempEdge.childAttributes = items[i].child.attributes;
+					pairsList.Add(tempEdge);
 					edges.Add (new GameObject ());
 					edges [i].AddComponent<LineRenderer> ();
 					line = edges [i].GetComponent<LineRenderer> ();
@@ -390,7 +386,6 @@ namespace vdrGraph
             return pairsList;
         }
 
-<<<<<<< HEAD
 		public static List<GameObject> getVertexList()
 		{
 			return vertexList;
@@ -411,6 +406,11 @@ namespace vdrGraph
 			return arrowInfoList;
 		}
 
+		public static List<Edge> getSerializableEdges()
+		{
+			return items;
+		}
+
 		private void saveGraph()
 		{
 			//send json back to file selector
@@ -418,18 +418,3 @@ namespace vdrGraph
 	}
 }
 	
-=======
-        string json = JsonHelper.ToJson<Edge>(edges.ToArray<Edge>());
-        File.WriteAllText("./Assets/Graphs/graph.json", json);
-    }
->>>>>>> 20d11c18c52b8d4f5ebe1c5649b400f6e044e112
-
-    public static List<EdgePairs> getNodePairList()
-    {
-        
-        return pairsList;
-    }
-}
-
-}
-

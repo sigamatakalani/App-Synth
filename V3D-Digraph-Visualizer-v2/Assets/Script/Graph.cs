@@ -18,23 +18,41 @@ public class Edge
         relationship = new Relationship();
         child = new Node();
     }
+
+    public Edge(Node n1, Node n2, Relationship r)
+    {
+        parent = n1;
+        relationship = r;
+        child = n2;
+    }
 }
 
+[System.Serializable]
 public class Node
 {
     public string name;
     public string label;
     public string colour;
-    public List<KeyValuePair<string, string>> attributes;
+    public List<Dictionary<string, string>> attributes;
 
     public Node()
     {
         name = "";
         label = "";
-        attributes = new List<KeyValuePair<string, string>>();
+        colour = "";
+        attributes = new List<Dictionary<string, string>>();
+    }
+
+    public Node(string n, string l, string c, List<Dictionary<string, string>> a)
+    {
+        name = n;
+        label = l;
+        colour = c;
+        attributes = a;
     }
 }
 
+[System.Serializable]
 public class Relationship
 {
     public string label;
@@ -45,13 +63,21 @@ public class Relationship
         label = "";
         weight = 0;
     }
-}
 
+    public Relationship(string l, int w)
+    {   
+        label = "";
+        weight = 0;
+    }
+}
+ 
 public class EdgePairs
 {
     public GameObject parent;
     public GameObject child;
     public Relationship relationship;
+    public List<Dictionary<string, string>> parentAttributes;
+    public List<Dictionary<string, string>> childAttributes;
 
     public EdgePairs()
     {
@@ -62,7 +88,6 @@ public class EdgePairs
 
     public EdgePairs(GameObject parent1, GameObject child1, Relationship relationship1)
     {
-
         parent = parent1;
         child = child1;
         relationship = relationship1;

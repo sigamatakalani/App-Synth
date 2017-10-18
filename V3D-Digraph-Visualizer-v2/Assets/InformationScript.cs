@@ -7,6 +7,8 @@ public class InformationScript : MonoBehaviour
 {
 
     public string jsonToSend = "";
+	public string fileName = "";
+	
 
 	// Use this for initialization
 	void Start () {
