@@ -2654,7 +2654,7 @@ Prefab:
     - target: {fileID: 102148440744500778, guid: 7f90e20a662033645857bb3ce89e5f71,
         type: 2}
       propertyPath: m_Text
-      value: Create Graph
+      value: Visit Website
       objectReference: {fileID: 0}
     - target: {fileID: 102148440744500778, guid: 7f90e20a662033645857bb3ce89e5f71,
         type: 2}
@@ -2816,7 +2816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 9.95}
+  m_AnchoredPosition: {x: 1, y: 9.95}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1753291973
@@ -2854,7 +2854,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'To create your own graph:
 
-    1. Visit our website 2. Create the graph,
+    1. Visit our website 2. Create the graph
 
     3. Download it 4. Return to this app
 

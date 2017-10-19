@@ -35,45 +35,64 @@
       "child": {"name":"Node6", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
     },
     {
-      "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node6", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node4", "label":"Green", "colour": "Green", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
-    }
-    ,
+      "child": {"name":"Node7", "label":"Yellow", "colour": "Yellow", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
     {
-      "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node6", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node8", "label":"pink", "colour": "pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
-    }
-    ,
+      "child": {"name":"Node8", "label":"Yellow", "colour": "Yellow", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
     {
-      "parent": {"name":"Node7", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node6", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node8", "label":"pink", "colour": "pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
-    }
-    ,
+      "child": {"name":"Node9", "label":"Yellow", "colour": "Yellow", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
     {
-      "parent": {"name":"Node8", "label":"pink", "colour": "pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node9", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node9", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+      "child": {"name":"Node10", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
     }
-    ,
-    {
-      "parent": {"name":"Node8", "label":"pink", "colour": "pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+    ,{
+      "parent": {"name":"Node9", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node10", "label":"Brown", "colour": "Brown", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
-    }
-    ,
+      "child": {"name":"Node11", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
     {
-      "parent": {"name":"Node5", "label":"Green", "colour": "Green","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node9", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node11", "label":"Brown", "colour": "Brown", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
-    }
-    ,
+      "child": {"name":"Node12", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
     {
-      "parent": {"name":"Node11", "label":"Brown", "colour": "Brown","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "parent": {"name":"Node9", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
       "relationship": {"label":"knows", "weight":10},
-      "child": {"name":"Node12", "label":"Purple", "colour": "Purple", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+      "child": {"name":"Node13", "label":"Orange", "colour": "Orange", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
+    {
+      "parent": {"name":"Node13", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "relationship": {"label":"knows", "weight":10},
+      "child": {"name":"Node14", "label":"Pink", "colour": "Pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
+    {
+      "parent": {"name":"Node13", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "relationship": {"label":"knows", "weight":10},
+      "child": {"name":"Node15", "label":"Pink", "colour": "Pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
+    {
+      "parent": {"name":"Node13", "label":"Yellow", "colour": "Yellow","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "relationship": {"label":"knows", "weight":10},
+      "child": {"name":"Node16", "label":"Pink", "colour": "Pink", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
+    {
+      "parent": {"name":"Node14", "label":"Pink", "colour": "Pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "relationship": {"label":"knows", "weight":10},
+      "child": {"name":"Node17", "label":"Purple", "colour": "Purple", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
+    },
+    {
+      "parent": {"name":"Node14", "label":"Pink", "colour": "Pink","attributes": [{"attr1":"hello"}, {"attr2":"there"}]},
+      "relationship": {"label":"knows", "weight":10},
+      "child": {"name":"Node18", "label":"Purple", "colour": "Purple", "attributes": [{"attr1":"hello"}, {"attr2":"there"}]}
     }
 ]
 

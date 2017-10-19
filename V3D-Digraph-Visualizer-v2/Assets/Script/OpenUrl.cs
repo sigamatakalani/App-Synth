@@ -73,6 +73,7 @@ public class OpenUrl : MonoBehaviour
 
     public void pointerDown()
     {
-        Application.OpenURL("http://booleansandwiches.com/interface");
+        Application.OpenURL("http://app-synth-webpage.herokuapp.com/web/");
     }
+    //
 }

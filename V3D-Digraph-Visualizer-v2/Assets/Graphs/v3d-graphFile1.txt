@@ -1,0 +1,1 @@
+[{"parent":{"name":"Node2","label":"","colour":"red","attributes":[]},"relationship":{"label":"","weight":0},"child":{"name":"Node1","label":"","colour":"red","attributes":[]}}]

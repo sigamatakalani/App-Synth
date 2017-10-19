@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using vdrGraph;
+using System.Linq;
 
 public class nodeInfoView : MonoBehaviour
 {
@@ -22,7 +24,30 @@ public class nodeInfoView : MonoBehaviour
 
     public void pointerEnter()
     {
-		ifo_Text.text = "Name: " + gameObject.name;	
+        string attributes = "";
+        Edge tempEdge = graphStart.getSerializableEdges().Where(x => x.parent.name == gameObject.name || x.child.name == gameObject.name).FirstOrDefault();
+        Node tempNode;
+
+        if(tempEdge != null)
+        {
+            if(tempEdge.parent.name == gameObject.name)
+            {
+                tempNode = tempEdge.parent;
+            }
+            else{
+                tempNode = tempEdge.child;
+            }
+            foreach(Dictionary<string, string> attr in tempNode.attributes)
+            {
+                foreach(KeyValuePair<string, string> obj in attr)
+                {
+                    attributes += obj.Key + " : " + obj.Value + " ";
+                }
+            }
+        }
+        
+        Debug.Log(attributes);
+		ifo_Text.text = attributes;	
     }
 
     public void pointerExit()

@@ -169,20 +169,20 @@ namespace CrudGraphNamespace
 				string filePath = GameObject.Find("InformationObject").GetComponent<InformationScript>().fileName;
 				//string filePath = "./Assets/Graphs/v3d-graphFile0.txt";
 
-				if(File.Exists(filePath))
+				if(filePath != "")
 				{
-					File.WriteAllText(filePath, json);
+					File.WriteAllText(Application.persistentDataPath + "/" + Path.GetFileName(filePath), json);
 				}
-				else
+				else if(json != "")
 				{
 					int count = 0;
-					string path = "/storage/emulated/0/Downloads/";
+					//string path = "/storage/emulated/0/Download/";
 					//string path = "./Assets/Graphs/";
-					while(File.Exists(path + "v3d-graphFile" + count + ".txt"))
+					while(File.Exists(Application.persistentDataPath + "/v3d-graphFile" + count + ".txt"))
 					{
 						count++;
 					}
-					File.WriteAllText(path + "v3d-graphFile" + count + ".txt", json);
+					File.WriteAllText(Application.persistentDataPath + "/v3d-graphFile" + count + ".txt", json);
 				}
 			}
 			SceneManager.LoadScene("startScreen");

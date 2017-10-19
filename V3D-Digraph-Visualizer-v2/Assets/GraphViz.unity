@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 40fa5696077438a49bbce1aac01eba84, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,11 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.86559486, g: 0.77935994, b: 0.65267193, a: 1}
+  m_IndirectSpecularColor: {r: 0.024409043, g: 0.023534484, b: 0.024736648, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1704,9 +1704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodePrefab: {fileID: 1599337388238968, guid: 5e1536ea02b87ab4494abfd3510832f9, type: 2}
   arrowHead: {fileID: 1357220585493250, guid: b0d2015c4f21d1149a82a20dc5960196, type: 2}
-  createNodeButton: {fileID: 0}
-  removeNodeButton: {fileID: 0}
-  editModeToggle: {fileID: 0}
+  createNodeButton: {fileID: 2117652995}
+  removeNodeButton: {fileID: 1561497574}
 --- !u!114 &1561497577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,11 +1962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2527d1d46349f84da9e6dabea0a9bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodePrefab: {fileID: 0}
-  arrowHead: {fileID: 0}
-  createNodeButton: {fileID: 0}
-  removeNodeButton: {fileID: 0}
-  editModeToggle: {fileID: 0}
+  nodePrefab: {fileID: 1599337388238968, guid: 5e1536ea02b87ab4494abfd3510832f9, type: 2}
+  arrowHead: {fileID: 1357220585493250, guid: b0d2015c4f21d1149a82a20dc5960196, type: 2}
+  createNodeButton: {fileID: 2117652995}
+  removeNodeButton: {fileID: 1561497574}
 --- !u!1 &1687855033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'attr1:value, attr2:value, attr3:value, attr4:value, attr5: value'
+  m_Text: '...'
 --- !u!222 &1687855036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2142,7 +2140,6 @@ MonoBehaviour:
   arrowHead: {fileID: 0}
   createNodeButton: {fileID: 2117652995}
   removeNodeButton: {fileID: 1561497574}
-  editModeToggle: {fileID: 1763802006}
 --- !u!114 &1763802010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,9 +2546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodePrefab: {fileID: 1599337388238968, guid: 5e1536ea02b87ab4494abfd3510832f9, type: 2}
   arrowHead: {fileID: 1357220585493250, guid: b0d2015c4f21d1149a82a20dc5960196, type: 2}
-  createNodeButton: {fileID: 0}
-  removeNodeButton: {fileID: 0}
-  editModeToggle: {fileID: 0}
+  createNodeButton: {fileID: 2117652995}
+  removeNodeButton: {fileID: 1561497574}
 --- !u!114 &2117652998
 MonoBehaviour:
   m_ObjectHideFlags: 0
