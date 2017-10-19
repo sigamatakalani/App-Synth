@@ -52,6 +52,7 @@ In order to make use of the system, ensure that you have all of the necessary ha
   \item The TeamViewer Quick Support mobile application
   \item The TeamViewer desktop application
   \item An internet connection to which both the mobile device and desktop are connected
+  \item Google Cardboard Mobile App
 \end{itemize}
 \end{flushleft}
 \section{Installation}
@@ -82,5 +83,35 @@ Once you have finished creating the graph, you can save it to a file which can b
 
 \subsection{Load existing graph}
 This option allows you to load a graph file that has already been stored on the mobile device. Upon selecting this option, you will see a grid of rectangles each with the name of any graph specifications which were found on your device. Use the reticle to select the desired graph, and you should be taken to a scene which contains a visualisation of the graph. The controls, buttons and functionality in this scene are identical to those mentioned in the section above titled “Get Started”. You will have the ability to view the graph, rotate it, zoom in and out and also create and remove nodes and relationships and save the graph to a graph specification file.
+
+\subsection{Create/Edit and Download Graph Files Online Interface}
+
+\includegraphics[width=450px]{InterfaceScreenshots/InterfaceCoverPage.PNG}
+
+\subsubsection{Overall Interface Description}
+The user is able to create their own graphs and edit existing graph files without having to be familiar with the format the application uses. The user can interact with a web interface to do so.
+
+\subsubsection{Creating a New Graph}
+
+\includegraphics[width=500px]{InterfaceScreenshots/EmptyInfo.PNG}
+
+\subsubsection{Enter Node Name and Relationship Information}
+To create a new graph the first step is to insert the node information required. This is done by inserting a parent node name, the relationship information it has with another node and finally the node with which this relationship is shared. The direction of the relationship goes from parent to child. Once this is entered, click the add button to add the nodes and the relationship.
+
+\includegraphics[width=500px]{InterfaceScreenshots/NewNodes.PNG}
+
+\subsubsection{Inserting Node Information}
+After adding the node names and relationship information. The nodes will appear bellow with input areas that allow the user to enter node specific information. These include the colour the user wishes the node to appear in, its label and an area to add attributes to the node that the user deems appropriate. Nodes can be removed at any time the user decides by clicking the remove button in red.
+
+\includegraphics[width=500px]{InterfaceScreenshots/AttributeAdded.PNG}
+
+\subsubsection{Adding and Removing Node Attributes}
+There are Two available inputs for the user to enter node attributes. One for the attribute name and the other for the attribute value. Once the user inserts the required information, the node attributes will appear beneath with the heading of 'Node Attributes'. The user can remove node attributes by clicking the red remove button that is placed to the right of it.
+
+\subsubsection{Editing an Existing Graph File}
+In order to select an existing graph, the user must click on the 'Choose File' button. Once clicked the user will be able to select a file to edit. After selecting a file the interface will load all the graph information into the page. The user can now change or add information and click the download button to get the updated file.
+
+\subsubsection{Downloading The File With Information Entered}
+To download the file the user has edited or created, the user must click on the download button. This is placed towards the top of the input areas on the web interface.
 
 \end{document}
