@@ -7,17 +7,17 @@
 \contentsline {section}{\numberline {4}Usage}{2}{section.4}
 \contentsline {subsection}{\numberline {4.1}Interactions}{2}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Start Menu}{2}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Get Started}{2}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Create Graph}{2}{subsubsection.4.3.1}
-\contentsline {paragraph}{Create Node: }{2}{section*.2}
-\contentsline {paragraph}{Remove Node: }{2}{section*.3}
-\contentsline {paragraph}{Save Graph: }{2}{section*.4}
-\contentsline {subsection}{\numberline {4.4}Load existing graph}{3}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Create/Edit and Download Graph Files Online Interface}{3}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Overall Interface Description}{3}{subsubsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.2}Creating a New Graph}{4}{subsubsection.4.5.2}
-\contentsline {subsubsection}{\numberline {4.5.3}Enter Node Name and Relationship Information}{4}{subsubsection.4.5.3}
-\contentsline {subsubsection}{\numberline {4.5.4}Inserting Node Information}{5}{subsubsection.4.5.4}
-\contentsline {subsubsection}{\numberline {4.5.5}Adding and Removing Node Attributes}{6}{subsubsection.4.5.5}
-\contentsline {subsubsection}{\numberline {4.5.6}Editing an Existing Graph File}{6}{subsubsection.4.5.6}
-\contentsline {subsubsection}{\numberline {4.5.7}Downloading The File With Information Entered}{7}{subsubsection.4.5.7}
+\contentsline {subsection}{\numberline {4.3}Get Started}{3}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Create Graph}{3}{subsubsection.4.3.1}
+\contentsline {paragraph}{Create Node: }{3}{section*.2}
+\contentsline {paragraph}{Remove Node: }{3}{section*.3}
+\contentsline {paragraph}{Save Graph: }{4}{section*.4}
+\contentsline {subsection}{\numberline {4.4}Load existing graph}{4}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Create/Edit and Download Graph Files Online Interface}{4}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Overall Interface Description}{5}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Creating a New Graph}{5}{subsubsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.3}Enter Node Name and Relationship Information}{5}{subsubsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.4}Inserting Node Information}{6}{subsubsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.5}Adding and Removing Node Attributes}{7}{subsubsection.4.5.5}
+\contentsline {subsubsection}{\numberline {4.5.6}Editing an Existing Graph File}{7}{subsubsection.4.5.6}
+\contentsline {subsubsection}{\numberline {4.5.7}Downloading The File With Information Entered}{8}{subsubsection.4.5.7}

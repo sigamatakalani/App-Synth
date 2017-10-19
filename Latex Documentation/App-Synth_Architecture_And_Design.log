@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  19 OCT 2017 02:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  19 OCT 2017 02:27
 entering extended mode
 **./App-Synth_Architecture_And_Design.tex
 (App-Synth_Architecture_And_Design.tex
@@ -180,26 +180,80 @@ Overfull \hbox (54.45891pt too wide) in paragraph at lines 58--59
 ] [3 <./Deployment Diagrams/Deployment Diagram.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
- [4] [5] [6]
-(App-Synth_Architecture_And_Design.aux) ) 
+
+<"Deployment Diagrams/CreationModule".png, id=22, 563.10374pt x 338.26375pt>
+File: "Deployment Diagrams/CreationModule".png Graphic file (type png)
+
+<use "Deployment Diagrams/CreationModule".png>
+Package pdftex.def Info: "Deployment Diagrams/CreationModule".png used on input
+ line 77.
+(pdftex.def)             Requested size: 281.55118pt x 169.13145pt.
+
+Overfull \hbox (36.82051pt too wide) in paragraph at lines 77--78
+[] 
+ []
+
+[4]
+<"Deployment Diagrams/ControlModule".png, id=27, 723.70375pt x 665.48625pt>
+File: "Deployment Diagrams/ControlModule".png Graphic file (type png)
+
+<use "Deployment Diagrams/ControlModule".png>
+Package pdftex.def Info: "Deployment Diagrams/ControlModule".png used on input 
+line 84.
+(pdftex.def)             Requested size: 361.85098pt x 332.74231pt.
+
+Overfull \hbox (36.7993pt too wide) in paragraph at lines 84--85
+[] 
+ []
+
+[5 <./Deployment Diagrams/CreationModule.png>] [6 <./Deployment Diagrams/Contro
+lModule.png>]
+<"Deployment Diagrams/RendererModule".png, id=37, 703.62875pt x 434.62375pt>
+File: "Deployment Diagrams/RendererModule".png Graphic file (type png)
+
+<use "Deployment Diagrams/RendererModule".png>
+Package pdftex.def Info: "Deployment Diagrams/RendererModule".png used on input
+ line 91.
+(pdftex.def)             Requested size: 351.8135pt x 217.31134pt.
+
+Overfull \hbox (36.79182pt too wide) in paragraph at lines 91--92
+[] 
+ []
+
+
+<"Deployment Diagrams/SerializationModule".png, id=38, 713.66624pt x 504.88625p
+t>
+File: "Deployment Diagrams/SerializationModule".png Graphic file (type png)
+ <use "Deployment Diagrams/SerializationModule".png>
+Package pdftex.def Info: "Deployment Diagrams/SerializationModule".png used on 
+input line 98.
+(pdftex.def)             Requested size: 356.83224pt x 252.44249pt.
+
+Overfull \hbox (36.8146pt too wide) in paragraph at lines 98--99
+[] 
+ []
+
+[7 <./Deployment Diagrams/RendererModule.png>] [8 <./Deployment Diagrams/Serial
+izationModule.png>] (App-Synth_Architecture_And_Design.aux) ) 
 Here is how much of TeX's memory you used:
- 1573 strings out of 493333
- 22733 string characters out of 3139201
+ 1593 strings out of 493333
+ 23541 string characters out of 3139201
  81314 words of memory out of 3000000
- 5098 multiletter control sequences out of 15000+200000
+ 5114 multiletter control sequences out of 15000+200000
  9097 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,5n,25p,780b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on App-Synth_Architecture_And_Design.pdf (7 pages, 223134 bytes)
+ 39i,6n,25p,780b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on App-Synth_Architecture_And_Design.pdf (9 pages, 258105 bytes)
 .
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
